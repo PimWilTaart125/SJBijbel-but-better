@@ -1740,11 +1740,11 @@
                 reference += `:${verses}`;
             }
 
-            const url = `https://www.bible.com/bible/111/${abbr}.${chapter}`;
-            if (verses) {
-                const versesPart = verses.replace('-', '%2D');
-                url += `.${versesPart}`;
-            }
+        let url = `https://www.bible.com/bible/111/${abbr}.${chapter}`;
+        if (verses) {
+            const versesPart = verses.replace('-', '%2D');
+            url += `.${versesPart}`;
+           }
 
             const card = document.createElement('a');
             card.href = url;
